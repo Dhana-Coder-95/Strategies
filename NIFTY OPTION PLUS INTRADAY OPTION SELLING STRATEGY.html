@@ -86,16 +86,17 @@
 
   <h3>Strategy Logic:</h3>
   <ul>
-    <li>Fix high of <span class="highlight">ITM (ATM-1) CE</span> with buffer <span class="highlight">2 points</span> of <span class="highlight">09:16 candle</span></li>
-    <li>Fix high of <span class="highlight">ITM (ATM+1) PE</span> with buffer <span class="highlight">2 points</span> of <span class="highlight">09:16 candle</span></li>
-    <li>Take position <span class="highlight">2 lots</span> in <span class="highlight">CE or PE</span> which first <span class="highlight">crosses high buffer</span></li>
-    <li><strong>Stop Loss:</strong> <span class="highlight">15 points</span></li>
+    <li>Fix high of <span class="highlight"> ATM CE </span> of <span class="highlight">09:16 candle</span></li>
+    <li>Fix high of <span class="highlight"> ATM PE </span> of <span class="highlight">09:16 candle</span></li>
+    <li>Take position <span class="highlight"> lots</span> in <span class="highlight">CE or PE 2lots </span> which first <span class="highlight">crosses its high </span></li>
+	<li>Buys hedge for <span class="highlight"> Rupees 5 </span></li>  
+    <li><strong>Stop Loss:</strong> <span class="highlight">10 points </span></li>
     <li><strong>Trailing:</strong> <span class="highlight">5 points</span></li>
-    <li><strong>1st lot Target:</strong> <span class="highlight">30 points</span></li>
-    <li><strong>2nd lot Target:</strong> <span class="highlight">60 points</span></li>
+    <li><strong>1st lot Target:</strong> <span class="highlight">20 points</span></li>
+    <li><strong>2nd lot Target:</strong> <span class="highlight">40 points</span></li>
     <li>If SL is hit, re-enter same leg with <span class="highlight">4 lots</span> when price reaches <span class="highlight">initial entry price</span>, with <span class="highlight">15-point SL</span> again</li>
-    <li><strong>1st 2 lots Target:</strong> <span class="highlight">30 points</span></li>
-    <li><strong>2nd 2 lots Target:</strong> <span class="highlight">60 points</span></li>
+    <li><strong>1st 2 lots Target:</strong> <span class="highlight">20 points</span></li>
+    <li><strong>2nd 2 lots Target:</strong> <span class="highlight">40 points</span></li>
     <li><strong>When SL hits:</strong> <span class="highlight">lot size increases</span></li>
     <li><strong>Position will be in either</strong> <span class="highlight">only PE or CE</span></li>
     <li>This SL re-entry cycle runs in a <span class="highlight">loop</span></li>
@@ -117,3 +118,4 @@
 
 </body>
 </html>
+
