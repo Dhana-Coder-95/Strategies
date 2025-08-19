@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Algovistas Strategy</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #ffffff; /* Day mode default */
+      color: #333;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      font-size: 20px; /* Increased font size */
+      font-weight: bold; /* Bold for all non-highlighted text */
+    }
+    a {
+      display: block;
+      margin-bottom: 20px;
+      olor: #007BFF;
+      text-decoration: none;
+      font-size: 30px; /* Larger font */
+      letter-spacing: 2px; /* Spread characters */
+      font-weight: normal; /* Avoids bulky bold look */
+    }
+    h1 {
+      color: #4B0082;
+    }
+    ul {
+      line-height: 1.8;
+      list-style-type: square;
+    }
+    .highlight {
+      background-color: #ffd966; /* soft gold */
+      font-weight: bold;
+      padding: 2px 5px;
+      border-radius: 4px;
+    }
+    /* Dark mode styles */
+    body.dark-mode {
+      background-color: #1e1e1e;
+      color: #f4f4f4;
+    }
+    body.dark-mode h1 {
+      color: #d4bfff;
+    }
+    body.dark-mode a {
+      color: #66b2ff;
+    }
+    body.dark-mode .highlight {
+      background-color: #7a5af5; /* purple highlight in night mode */
+      color: #fff;
+    }
+    /* Toggle button style */
+    #toggleMode {
+      background-color: #4B0082;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 15px 0;
+      font-size: 16px;
+    }
+    #toggleMode:hover {
+      background-color: #6a0dad;
+    }
+  </style>
+</head>
+<body>
+
+  <a href=""><strong> ▶️ NIFTY ALGOTRIX PLUS 1 MIN OPTION BUY V3 WITH PORTFOLIO TRAILING <span class="highlight"> ID: 8255431</span></strong></a>
+   
+     <h1> CLICK ABOVE FOR VIDEO</h1>
+
+  <!-- Button moved below heading -->
+  <button id="toggleMode">🌞 Day / 🌙 Night</button>
+
+  <ul>
+    <li><strong>Entry Timings:</strong> <span class="highlight">9:16 AM onwards</span></li>
+    <li><strong>Underlying:</strong> <span class="highlight">NIFTY</span></li>
+    <li><strong>Order Type:</strong> <span class="highlight">MIS</span></li>
+    <li><strong>Option Contracts:</strong> <span class="highlight">Current Week</span></li>
+	<li><strong>Capital Required:</strong> <span class="highlight">2,50,000</span></li>
+  </ul>
+
+
+  <h3>Strategy Logic:</h3>
+  <ul>
+    <li>Fix high of <span class="highlight">ITM (ATM-1) CE</span> with buffer <span class="highlight">2 points</span> of <span class="highlight">09:16 candle</span></li>
+    <li>Fix high of <span class="highlight">ITM (ATM+1) PE</span> with buffer <span class="highlight">2 points</span> of <span class="highlight">09:16 candle</span></li>
+    <li>Take position <span class="highlight">2 lots</span> in <span class="highlight">CE or PE</span> which first <span class="highlight">crosses high buffer</span></li>
+    <li><strong>Stop Loss:</strong> <span class="highlight">15 points</span></li>
+    <li><strong>Trailing:</strong> <span class="highlight">5 points</span></li>
+    <li><strong>1st lot Target:</strong> <span class="highlight">30 points</span></li>
+    <li><strong>2nd lot Target:</strong> <span class="highlight">60 points</span></li>
+    <li>If SL is hit, re-enter same leg with <span class="highlight">4 lots</span> when price reaches <span class="highlight">initial entry price</span>, with <span class="highlight">15-point SL</span> again</li>
+    <li><strong>1st 2 lots Target:</strong> <span class="highlight">30 points</span></li>
+    <li><strong>2nd 2 lots Target:</strong> <span class="highlight">60 points</span></li>
+    <li><strong>When SL hits:</strong> <span class="highlight">lot size increases</span></li>
+    <li><strong>Position will be in either</strong> <span class="highlight">only PE or CE</span></li>
+    <li>This SL re-entry cycle runs in a <span class="highlight">loop</span></li>
+  </ul>
+
+  <h3>Universal Exit Conditions:</h3>
+  <ul>
+    <li>Time-based Exit: <span class="highlight">3:15 PM</span></li>
+    <li>MTM Stop Loss: <span class="highlight">10000 for 1 lot</span></li>
+    <li>MTM Target: <span class="highlight">10000 for 1 lot</span></li>
+  </ul>
+
+  <script>
+    const toggleButton = document.getElementById("toggleMode");
+    toggleButton.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+    });
+  </script>
+
+</body>
+</html>
